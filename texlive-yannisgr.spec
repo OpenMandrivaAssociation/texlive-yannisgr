@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-yannisgr
 Version:	20110522
-Release:	9
+Release:	10
 Summary:	Greek fonts by Yannis Haralambous
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/yannis
