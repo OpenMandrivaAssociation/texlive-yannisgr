@@ -1,18 +1,12 @@
-# revision 22613
-# category Package
-# catalog-ctan /fonts/greek/yannis
-# catalog-date 2011-05-22 00:38:15 +0200
-# catalog-license gpl2
-# catalog-version undef
 Name:		texlive-yannisgr
-Version:	20190228
+Version:	22613
 Release:	1
 Summary:	Greek fonts by Yannis Haralambous
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/yannis
 License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/yannisgr.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/yannisgr.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/yannisgr.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/yannisgr.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ source; macros to produce a Greek variant of Plain TeX
 table) are provided.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -87,23 +81,10 @@ table) are provided.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110522-2
-+ Revision: 757740
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110522-1
-+ Revision: 719961
-- texlive-yannisgr
-- texlive-yannisgr
-- texlive-yannisgr
-
