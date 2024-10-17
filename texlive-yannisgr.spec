@@ -3,7 +3,7 @@ Version:	22613
 Release:	2
 Summary:	Greek fonts by Yannis Haralambous
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/greek/yannis
+URL:		https://www.ctan.org/tex-archive/fonts/greek/yannis
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/yannisgr.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/yannisgr.doc.r%{version}.tar.xz
